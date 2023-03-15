@@ -1,4 +1,5 @@
-﻿using REGON.Responses;
+﻿using System.Threading.Tasks;
+using REGON.Responses;
 
 namespace REGON.Services
 {

@@ -1,4 +1,6 @@
-﻿using REGON.Enums;
+﻿using System;
+using System.Collections.Generic;
+using REGON.Enums;
 using REGON.Models;
 
 namespace REGON.Responses

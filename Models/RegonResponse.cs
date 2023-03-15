@@ -1,4 +1,7 @@
-﻿namespace REGON.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace REGON.Models
 {
     public class RegonResponse
     {

@@ -1,7 +1,10 @@
-﻿using REGON.Models;
+﻿using System;
+using System.IO;
+using REGON.Models;
 using RegonApiService;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using WcfCoreMtomEncoder;

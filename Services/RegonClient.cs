@@ -1,4 +1,7 @@
-﻿using REGON.Enums;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using REGON.Enums;
 using REGON.Models;
 using REGON.Responses;
 
