@@ -24,6 +24,4 @@ jobs:
       continue-on-error: false
 
     - name: 🚀 Push new nuget package
-        env:
-          NUGET_ORG_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: dotnet nuget push ./artifacts/REGON.Client.${{ github.ref_name }}.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./artifacts/REGON.Client.${{ github.ref_name }}.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
