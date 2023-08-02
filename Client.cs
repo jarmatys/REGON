@@ -236,7 +236,7 @@ namespace REGON
 
         private static bool IsActive(string companyName)
         {
-            return companyName.ToUpper().Contains("W LIKWIDACJI");
+            return IsSpzoo(companyName) || companyName.ToUpper().Contains("W LIKWIDACJI");
         }
     }
 
