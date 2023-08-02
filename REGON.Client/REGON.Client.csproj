@@ -6,17 +6,29 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    </ItemGroup>
-
     <PropertyGroup>
-        <PackageId>REGON</PackageId>
+        <AssemblyName>REGON</AssemblyName>
+        <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>latest</LangVersion>
+        <OutputType>exe</OutputType>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+        <Title>$(AssemblyName)</Title>
         <Authors>JAROSŁAW ARMATYS</Authors>
-        <Company>ARMATYS.ME</Company>
-        <PackageDescription>REGON API CONNECTOR</PackageDescription>
-        <RepositoryUrl>https://github.com/jarmatys/REGON</RepositoryUrl>
+        <Copyright>Copyright (c) 2023 $(Authors)</Copyright>
+        <Description>REGON API CLIENT</Description>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <PackageId>$(AssemblyName)</PackageId>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/jarmatys/REGON</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReleaseNotes>See $(PackageProjectUrl)/blob/master/CHANGELOG.md for release notes.</PackageReleaseNotes>
+        <PackageTags>REGON;Client;GUS;.NET;CSharp;C#</PackageTags>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>$(PackageProjectUrl)</RepositoryUrl>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,7 +37,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\REGON.Infrastructure\REGON.Infrastructure.csproj" Pack="true" PackagePath="\" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\REGON.Infrastructure\REGON.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
