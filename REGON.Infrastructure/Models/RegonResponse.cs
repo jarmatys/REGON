@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace REGON.Models
+namespace REGON.Infrastructure.Models
 {
     public class RegonResponse
     {

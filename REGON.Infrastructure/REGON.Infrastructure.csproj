@@ -14,13 +14,4 @@
     <PackageReference Include="WcfCoreMtomEncoder" Version="0.1.16" />
   </ItemGroup>
   
-  <PropertyGroup>
-    <PackageId>REGON</PackageId>
-    <Version>1.1.0</Version>
-    <Authors>JAROSŁAW ARMATYS</Authors>
-    <Company>ARMATYS.ME</Company>
-    <PackageDescription>REGON API CONNECTOR</PackageDescription>
-    <RepositoryUrl>https://github.com/jarmatys/REGON</RepositoryUrl>
-  </PropertyGroup>
-
 </Project>

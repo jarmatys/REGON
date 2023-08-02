@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using REGON.Enums;
-using REGON.Models;
+using REGON.Infrastructure.Enums;
+using REGON.Infrastructure.Models;
 
-namespace REGON.Responses
+namespace REGON.Infrastructure.Responses
 {
     public class Company
     {

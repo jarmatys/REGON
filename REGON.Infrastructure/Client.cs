@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using REGON.Enums;
-using REGON.Models;
+using REGON.Infrastructure.Enums;
+using REGON.Infrastructure.Models;
 
-namespace REGON
+namespace REGON.Infrastructure
 {
     public class Client
     {

@@ -1,7 +1,6 @@
-﻿using System.Threading.Tasks;
-using REGON.Responses;
+﻿using REGON.Infrastructure.Responses;
 
-namespace REGON.Services
+namespace REGON.Client.Services
 {
     public interface IRegonClient
     {

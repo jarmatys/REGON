@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace REGON.Models
+namespace REGON.Infrastructure.Models
 {
     [XmlRoot(ElementName = "dane")]
     public class DaneSzukajPodmioty

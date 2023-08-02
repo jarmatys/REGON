@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using REGON.Services;
+using REGON.Client.Services;
 
-namespace REGON
+namespace REGON.Client
 {
     public static class DependencyInjection
     {

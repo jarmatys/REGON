@@ -1,6 +1,6 @@
 ﻿using RegonApiService;
 
-namespace REGON.Models
+namespace REGON.Infrastructure.Models
 {
     internal class ClientModel
     {

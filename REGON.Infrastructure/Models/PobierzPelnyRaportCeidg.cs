@@ -1,7 +1,6 @@
-﻿using System;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
-namespace REGON.Models
+namespace REGON.Infrastructure.Models
 {
 	[XmlRoot(ElementName = "dane")]
 	public class DanePobierzPelnyRaportCeidg

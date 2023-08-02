@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON", "REGON.csproj", "{16B081D2-E046-4300-8BAF-C1EF6BE70430}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Infrastructure", "REGON.Infrastructure\REGON.Infrastructure.csproj", "{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Client", "REGON.Client\REGON.Client.csproj", "{8BF0CB9E-F82F-435A-A15A-FC86931664C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{16B081D2-E046-4300-8BAF-C1EF6BE70430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16B081D2-E046-4300-8BAF-C1EF6BE70430}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16B081D2-E046-4300-8BAF-C1EF6BE70430}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16B081D2-E046-4300-8BAF-C1EF6BE70430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
