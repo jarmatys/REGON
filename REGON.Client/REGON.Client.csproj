@@ -2,8 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -11,8 +9,6 @@
         <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>latest</LangVersion>
-        <OutputType>exe</OutputType>
-        <TargetFrameworks>net6.0</TargetFrameworks>
         <Title>$(AssemblyName)</Title>
         <Authors>JAROSŁAW ARMATYS</Authors>
         <Copyright>Copyright (c) 2023 $(Authors)</Copyright>
