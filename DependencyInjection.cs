@@ -7,7 +7,7 @@ namespace REGON
     {
         public static IServiceCollection AddRegonClient(this IServiceCollection services, string apiKey)
         {
-            services.AddTransient<IRegonClient>(provider => new RegonClient(apiKey));
+            services.AddTransient<IRegonClient>(_ => new RegonClient(apiKey));
 
             return services;
         }

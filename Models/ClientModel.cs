@@ -4,7 +4,7 @@ namespace REGON.Models
 {
     internal class ClientModel
     {
-        public UslugaBIRzewnPublClient Client { get; set; }
-        public string Sid { get; set; }
+        public UslugaBIRzewnPublClient Client { get; init; }
+        public string Sid { get; init; }
     }
 }

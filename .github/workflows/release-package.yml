@@ -1,0 +1,26 @@
+name: REGON - RELEASE NEW VERSION TO NUGET.ORG
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  synchronization:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: ⚙️ Install dotnet
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.100
+
+    - name: 🔗 Restore dependencies
+      run: dotnet restore
+
+    - name: 📂 Create new nuget package
+      run: dotnet pack --configuration Release
+
+    - name: 🚀 Push new nuget package
+      run: dotnet nuget push ./bin/Release/REGON.${{ github.ref_name }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using REGON.Enums;
 using REGON.Models;
@@ -22,13 +23,9 @@ namespace REGON.Services
             {
                 var response = await _clientRegon.GetFullCompanyDataByNip(nip);
 
-                if (response != null)
-                {
-                    return CreateRegonResult(response);
-                }
-
-                return new Company();
-                
+                return response != null 
+                    ? CreateRegonResult(response) 
+                    : new Company();
             }
             catch (Exception ex)
             {
@@ -42,12 +39,9 @@ namespace REGON.Services
             {
                 var response = await _clientRegon.GetFullCompanyDataByKrs(krs);
 
-                if (response != null)
-                {
-                    return CreateRegonResult(response);
-                }
-
-                return new Company();
+                return response != null 
+                    ? CreateRegonResult(response) 
+                    : new Company();
             }
             catch (Exception ex)
             {
@@ -57,13 +51,11 @@ namespace REGON.Services
 
         private static Company CreateRegonResult(RegonResponse response)
         {
-            var pkds = new List<Pkd>();
+            var pkdsResult = new List<Pkd>();
             if (response.Pkds != null)
             {
-                foreach (var pkd in response.Pkds)
-                {
-                    pkds.Add(new Pkd { Value = pkd.Value, Name = pkd.Name });
-                }
+                var pkds = response.Pkds.Select(pkd => new Pkd { Value = pkd.Value, Name = pkd.Name });
+                pkdsResult.AddRange(pkds);
             }
             
             var legalForm = (LegalForm)Enum.Parse(typeof(LegalForm), response.LegalForm);
@@ -81,10 +73,11 @@ namespace REGON.Services
                 LegalForm = legalForm,
                 Street = response.Street,
                 MainPkd = response.MainPkd?.Value,
-                Pkds = pkds,
+                Pkds = pkdsResult,
                 StartDate = response.StartDate,
                 EndDate = response.EndDate,
                 IsSuspended = response.IsSuspended,
+                IsActive = response.IsActive,
                 Voivodeship = response.Voivodeship,
                 District = response.District,
                 Commune = response.Commune,

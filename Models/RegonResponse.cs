@@ -5,26 +5,27 @@ namespace REGON.Models
 {
     public class RegonResponse
     {
-        public string Name { get; set; }
-        public string Krs { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string BuildingNumber { get; set; }
-        public string FlatNumber { get; set; }
-        public string PostCode { get; set; }
-        public string NIP { get; set; }
-        public string REGON { get; set; }
-        public string Commune { get; set; }
-        public string District { get; set; }
-        public string Voivodeship { get; set; }
-        public string LegalForm { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public bool IsSuspended { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public string WebsiteUrl { get; set; }
-        public Pkd MainPkd { get; set; }
-        public List<Pkd> Pkds { get; set; }
+        public string Name { get; init; }
+        public string Krs { get; init; }
+        public string Street { get; init; }
+        public string City { get; init; }
+        public string BuildingNumber { get; init; }
+        public string FlatNumber { get; init; }
+        public string PostCode { get; init; }
+        public string NIP { get; init; }
+        public string REGON { get; init; }
+        public string Commune { get; init; }
+        public string District { get; init; }
+        public string Voivodeship { get; init; }
+        public string LegalForm { get; init; }
+        public DateTime StartDate { get; init; }
+        public DateTime? EndDate { get; init; }
+        public bool IsSuspended { get; init; }
+        public bool IsActive { get; init; }
+        public string PhoneNumber { get; init; }
+        public string Email { get; init; }
+        public string WebsiteUrl { get; init; }
+        public Pkd MainPkd { get; init; }
+        public List<Pkd> Pkds { get; init; }
     }
 }

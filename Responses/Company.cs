@@ -24,6 +24,7 @@ namespace REGON.Responses
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool IsSuspended { get; set; }
+        public bool IsActive { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string WebsiteUrl { get; set; }

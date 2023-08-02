@@ -22,14 +22,19 @@ namespace REGON
 
         private async Task<ClientModel> PrepareClient()
         {
-            var encodingBinding = new TextMessageEncodingBindingElement();
-            encodingBinding.ReaderQuotas.MaxStringContentLength = Int32.MaxValue;
+            var encodingBinding = new TextMessageEncodingBindingElement
+            {
+                ReaderQuotas =
+                {
+                    MaxStringContentLength = int.MaxValue
+                }
+            };
 
             var encoding = new MtomMessageEncoderBindingElement(encodingBinding);
             var transport = new HttpsTransportBindingElement
             {
-                MaxReceivedMessageSize = Int32.MaxValue,
-                MaxBufferSize = Int32.MaxValue
+                MaxReceivedMessageSize = int.MaxValue,
+                MaxBufferSize = int.MaxValue
             };
 
             var customBinding = new CustomBinding(encoding, transport);
@@ -54,20 +59,18 @@ namespace REGON
             };
         }
 
-        private T ConvertXml<T>(string textXml)
+        private static T ConvertXml<T>(string textXml)
         {
             var xmlDoc = new XmlDocument();
             xmlDoc.LoadXml(textXml);
 
             var xml = xmlDoc.InnerXml;
 
-            T resultObject;
             var serializer = new XmlSerializer(typeof(T), new XmlRootAttribute("root"));
 
-            using (var reader = new StringReader(xml))
-            {
-                resultObject = (T)serializer.Deserialize(reader);
-            }
+            using var reader = new StringReader(xml);
+            
+            var resultObject = (T)serializer.Deserialize(reader);
 
             return resultObject;
         }
@@ -112,7 +115,7 @@ namespace REGON
             return result;
         }
 
-        // spółki
+        // Spółki
         public async Task<PobierzPelnyRaport> PobierzPelnyRaportPrawna(string regonNumber)
         {
             var regon = await PrepareClient();
@@ -158,7 +161,7 @@ namespace REGON
         }
 
         // Jednosobowe działalności - kody PKD
-        public async Task<PobierzPKDFizyczna> PobierzPKDFizyczna(string regonNumber)
+        public async Task<PobierzPKDFizyczna> PobierzPkdFizyczna(string regonNumber)
         {
             var regon = await PrepareClient();
 
