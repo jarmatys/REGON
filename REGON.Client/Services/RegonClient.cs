@@ -1,4 +1,4 @@
-﻿using REGON.Infrastructure.Enums;
+﻿using REGON.Common.Enums;
 using REGON.Infrastructure.Models;
 using REGON.Infrastructure.Responses;
 

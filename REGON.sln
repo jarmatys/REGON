@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Infrastructure", "REG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Client", "REGON.Client\REGON.Client.csproj", "{8BF0CB9E-F82F-435A-A15A-FC86931664C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Common", "REGON.Common\REGON.Common.csproj", "{F8A4786F-08EE-4DF5-876F-E24F93A9EDB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BF0CB9E-F82F-435A-A15A-FC86931664C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A4786F-08EE-4DF5-876F-E24F93A9EDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A4786F-08EE-4DF5-876F-E24F93A9EDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A4786F-08EE-4DF5-876F-E24F93A9EDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A4786F-08EE-4DF5-876F-E24F93A9EDB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

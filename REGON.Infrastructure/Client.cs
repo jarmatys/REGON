@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using REGON.Infrastructure.Enums;
+using REGON.Common.Enums;
 using REGON.Infrastructure.Models;
 
 namespace REGON.Infrastructure
