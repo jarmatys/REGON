@@ -5,7 +5,7 @@ on:
     types: [released]
 
 jobs:
-  synchronization:
+  publishing:
     runs-on: ubuntu-latest
 
     steps:
