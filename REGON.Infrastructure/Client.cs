@@ -22,8 +22,8 @@ namespace REGON.Infrastructure
             var basicData = await _httpClient.SzukajPodmiotuByNip(nip);
 
             return await CreateRegonResponse(basicData.Dane);
-       }
-        
+        }
+
         public async Task<RegonResponse> GetFullCompanyDataByKrs(string krs)
         {
             ValidateInput(krs);
@@ -71,7 +71,7 @@ namespace REGON.Infrastructure
                 PhoneNumber = advancedReportData?.PhoneNumber
             };
         }
-        
+
         private async Task<PkdModel> GetPkds(LegalForm legalForm, string regon)
         {
             switch (legalForm)
@@ -91,7 +91,7 @@ namespace REGON.Infrastructure
                     return null;
             }
         }
-        
+
         private async Task<PkdModel> GetPkdForPhysicalPerson(string regon)
         {
             var pkds = await _httpClient.PobierzPkdFizyczna(regon);
@@ -113,7 +113,7 @@ namespace REGON.Infrastructure
 
             return result;
         }
-        
+
         private async Task<PkdModel> GetPkdForLegalPerson(string regon)
         {
             var pkds = await _httpClient.PobierzPKDPrawna(regon);
@@ -135,7 +135,7 @@ namespace REGON.Infrastructure
 
             return result;
         }
-        
+
         private async Task<AdvanceReportData> GetAdvanceReportData(LegalForm legalForm, string regon)
         {
             switch (legalForm)
@@ -155,7 +155,7 @@ namespace REGON.Infrastructure
                     return null;
             }
         }
-        
+
         private async Task<AdvanceReportData> GetReportForPhyisicalPerson(string regon)
         {
             var fullReport = await _httpClient.PobierzPelnyRaportCeidg(regon);
@@ -170,7 +170,7 @@ namespace REGON.Infrastructure
                 Email = ValueOrNull(fullReport.Dane.FizAdresEmail)
             };
         }
-        
+
         private async Task<AdvanceReportData> GetReportForLegalPerson(string regon)
         {
             var fullReport = await _httpClient.PobierzPelnyRaportPrawna(regon);
@@ -185,22 +185,22 @@ namespace REGON.Infrastructure
                 Email = ValueOrNull(fullReport.Dane.PrawAdresEmail)
             };
         }
-        
+
         private static DateTime? GetDate(string dateTime)
         {
             return !string.IsNullOrEmpty(dateTime) ? Convert.ToDateTime(dateTime) : null;
         }
-        
+
         private static bool IsHappened(string dateTime)
         {
             return !string.IsNullOrEmpty(dateTime);
         }
-        
+
         private static string ValueOrNull(string value)
         {
             return !string.IsNullOrEmpty(value) ? value : null;
         }
-        
+
         private static void ValidateInput(string nip)
         {
             if (string.IsNullOrEmpty(nip))
@@ -208,7 +208,7 @@ namespace REGON.Infrastructure
                 throw new Exception("[REGON] NIP/KRS is required parameter!");
             }
         }
-        
+
         private static LegalForm CheckLegalForm(string companyName, string type)
         {
             return type switch
@@ -229,14 +229,16 @@ namespace REGON.Infrastructure
 
         private static bool IsSpzoo(string companyName)
         {
-            return companyName.ToUpper().Contains("SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ") || 
+            return companyName.ToUpper().Contains("SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ") ||
                    companyName.ToUpper().Contains("SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIANOŚCIĄ") ||
                    companyName.ToUpper().Contains("SPÓŁKA Z OGRANICZONA ODPOWIEDZIALNOŚCIĄ");
         }
 
         private static bool IsActive(string companyName)
         {
-            return IsSpzoo(companyName) || companyName.ToUpper().Contains("W LIKWIDACJI");
+            if (!IsSpzoo(companyName)) return true;
+
+            return !(companyName.ToUpper().Contains("W LIKWIDACJI") || companyName.ToUpper().Contains("LIKWIDACYJNEJ"));
         }
     }
 

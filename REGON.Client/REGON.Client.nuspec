@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <title>REGON</title>
+        <id>REGON</id>
+        <authors>Jarosław Armatys</authors>
+        <owners>jarmatys</owners>
+        <projectUrl>https://github.com/jarmatys/REGON</projectUrl>
+        <license type="expression">MIT</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>See https://github.com/jarmatys/REGON/CHANGELONG.md for release notes.</releaseNotes>
+        <description>REGON API CLIENT</description>
+        <copyright>Copyright (c) 2023 Jarosław Armatys</copyright>
+        <tags>REGON Client GUS .NET CSharp C#</tags>
+
+        <dependencies>
+            <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="7.0.0"/>
+        </dependencies>
+    </metadata>
+
+    <files>
+        <file src="..\README.md" target=""/>
+        <file src="..\LICENSE" target=""/>
+        <file src="..\REGON.Common\bin\Release\REGON.Common.dll" target="lib\net6.0"/>
+        <file src="..\REGON.Infrastructure\bin\Release\REGON.Infrastructure.dll" target="lib\net6.0"/>
+    </files>
+</package>
