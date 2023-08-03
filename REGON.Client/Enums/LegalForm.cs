@@ -1,4 +1,4 @@
-﻿namespace REGON.Common.Enums
+﻿namespace REGON.Client.Enums
 {
     public enum LegalForm
     {

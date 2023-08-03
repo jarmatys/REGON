@@ -1,4 +1,4 @@
-﻿namespace REGON.Infrastructure.Models
+﻿namespace REGON.Client.Models
 {
     public class Pkd
     {

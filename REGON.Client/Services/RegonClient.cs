@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using REGON.Common.Enums;
-using REGON.Infrastructure.Models;
-using REGON.Infrastructure.Responses;
+﻿using REGON.Client.Enums;
+using REGON.Client.Models;
+using REGON.Client.Responses;
 
 namespace REGON.Client.Services
 {
     public class RegonClient : IRegonClient
     {
-        private readonly Infrastructure.Client _clientRegon;
+        private readonly REGON.Client.Client _clientRegon;
 
         public RegonClient(string apiKey)
         {
-            _clientRegon = new Infrastructure.Client(apiKey);
+            _clientRegon = new REGON.Client.Client(apiKey);
         }
 
         public async Task<Company> GetCompanyDataByNip(string nip)

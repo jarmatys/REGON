@@ -1,14 +1,12 @@
-﻿using System.IO;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.ServiceModel.Channels;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
-using REGON.Infrastructure.Models;
+using REGON.Client.Models;
 using RegonApiService;
 using WcfCoreMtomEncoder;
 
-namespace REGON.Infrastructure
+namespace REGON.Client
 {
     public class HttpClient
     {

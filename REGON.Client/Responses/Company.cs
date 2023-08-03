@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using REGON.Common.Enums;
-using REGON.Infrastructure.Models;
+﻿using REGON.Client.Enums;
+using REGON.Client.Models;
 
-namespace REGON.Infrastructure.Responses
+namespace REGON.Client.Responses
 {
     public class Company
     {
