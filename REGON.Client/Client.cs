@@ -210,7 +210,7 @@ namespace REGON.Client
         {
             return type switch
             {
-                "P" when companyName.ToUpper().Contains("SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ") &&
+                "P" when IsSpzoo(companyName) &&
                          companyName.ToUpper().Contains("SPÓŁKA KOMANDYTOWA") => LegalForm.SPZOOSK,
                 "P" when IsSpzoo(companyName) => LegalForm.SPZOO,
                 "P" when companyName.ToUpper().Contains("SPÓŁKA AKCYJNA") => LegalForm.SA,
