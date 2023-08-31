@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Client", "REGON.Client\REGON.Client.csproj", "{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REGON.Playground", "REGON.Playground\REGON.Playground.csproj", "{1AD70396-641C-4A86-B8B3-4FC8CE8D2ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21E14E3-16A5-49A7-8974-D8ED3A5ADCFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD70396-641C-4A86-B8B3-4FC8CE8D2ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD70396-641C-4A86-B8B3-4FC8CE8D2ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD70396-641C-4A86-B8B3-4FC8CE8D2ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD70396-641C-4A86-B8B3-4FC8CE8D2ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
