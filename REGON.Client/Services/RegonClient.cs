@@ -6,11 +6,11 @@ namespace REGON.Client.Services
 {
     public class RegonClient : IRegonClient
     {
-        private readonly REGON.Client.Client _clientRegon;
+        private readonly Client _clientRegon;
 
         public RegonClient(string apiKey)
         {
-            _clientRegon = new REGON.Client.Client(apiKey);
+            _clientRegon = new Client(apiKey);
         }
 
         public async Task<Company> GetCompanyDataByNip(string nip)
